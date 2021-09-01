@@ -5,6 +5,7 @@ import {
   FlatList,
   RefreshControl,
   StyleSheet,
+  Text,
   View,
 } from 'react-native';
 import { JobFilter } from '../components/JobFilter';
@@ -69,8 +70,8 @@ const JobListScreen = () => {
             <RefreshControl onRefresh={onRefresh} refreshing={isLoading} />
           }
           keyExtractor={item => item?.id}
+          ListEmptyComponent={<Text>job Not Found</Text>}
           renderItem={item => <JobItem {...item} />}
-          // onEndReached={nextPage}
         />
       )}
     </View>

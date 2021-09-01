@@ -16,10 +16,10 @@ export const JobItem = ({ item }) => {
             uri: item.company_logo,
           }}
         />
-        <View>
+        <View style={styles.flex1}>
           <Text>{item?.title ?? ''}</Text>
-          <Text>{item?.company ?? ''}</Text>
-          <Text>{item?.location ?? ''}</Text>
+          <Text style={styles.textGrey}>{item?.company ?? ''}</Text>
+          <Text style={styles.textGrey}>{item?.location ?? ''}</Text>
         </View>
       </View>
     </TouchableOpacity>
@@ -38,4 +38,10 @@ const styles = StyleSheet.create({
     height: 70,
     marginRight: 10,
   },
+  textGrey: {
+    color: 'grey',
+    marginBottom: 5,
+    fontSize: 12,
+  },
+  flex1: { flex: 1 },
 });

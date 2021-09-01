@@ -20,7 +20,6 @@ const JobDetail = () => {
   useEffect(() => {
     getJobById(params.id)
       .then(res => {
-        console.log(res);
         setJob(res.data);
       })
       .catch(e => {
